@@ -49,8 +49,8 @@ import org.aspectj.lang.reflect.MethodSignature;
 /**
  * Execute method in multiple threads.
  *
- * @since 0.10
  * @see Parallel
+ * @since 0.10
  * @checkstyle NonStaticMethodCheck (100 lines)
  */
 @Aspect
@@ -71,6 +71,7 @@ public final class Parallelizer {
      * @checkstyle IllegalThrowsCheck (4 lines)
      */
     @Around("execution(@com.jcabi.aspects.Parallel * * (..))")
+    @SuppressWarnings("PMD.CloseResource")
     public Object wrap(final ProceedingJoinPoint point)
         throws Parallelizer.ParallelException {
         final int total = ((MethodSignature) point.getSignature())

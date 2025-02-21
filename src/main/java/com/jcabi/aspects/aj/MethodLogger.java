@@ -58,11 +58,11 @@ import org.aspectj.lang.reflect.MethodSignature;
 @Aspect
 @SuppressWarnings
     (
-        {
-            "PMD.AvoidCatchingThrowable",
-            "PMD.TooManyMethods",
-            "PMD.CyclomaticComplexity"
-        }
+    {
+    "PMD.AvoidCatchingThrowable",
+    "PMD.TooManyMethods",
+    "PMD.CyclomaticComplexity"
+    }
     )
 public final class MethodLogger {
 
@@ -77,7 +77,8 @@ public final class MethodLogger {
     @SuppressWarnings(
         {
             "PMD.DoNotUseThreads",
-            "PMD.ConstructorOnlyInitializesOrCallOtherConstructors"
+            "PMD.ConstructorOnlyInitializesOrCallOtherConstructors",
+            "PMD.CloseResource"
         }
     )
     public MethodLogger() {
